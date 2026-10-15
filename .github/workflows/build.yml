@@ -122,18 +122,18 @@ jobs:
         run: uv run main.py ${{ matrix.id }} ${{ matrix.arch }}
 
       - name: Upload APKs to draft release
-        if: always()
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TAG: ${{ needs.prepare.outputs.version }}
-        run: |
-          shopt -s nullglob
-          apks=(./build/*.apk)
-          if [[ ${#apks[@]} -eq 0 ]]; then
-            echo "No APKs to upload, skipping"
-            exit 0
-          fi
-          gh release upload "$TAG" "${apks[@]}" --clobber --repo "$GITHUB_REPOSITORY"
+    if: always()
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      TAG: ${{ needs.prepare.outputs.version }}
+    run: |
+      shopt -s nullglob
+      apks=(./build/*.apk)
+      if [[ ${#apks[@]} -eq 0 ]]; then
+        echo "No APKs to upload, skipping"
+        exit 0
+      fi
+      gh release upload "$TAG" "${apks[@]}" --clobber --repo "$GITHUB_REPOSITORY"
 
       - name: Upload build log to draft release
         if: always()
