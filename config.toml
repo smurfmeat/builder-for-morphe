@@ -7,7 +7,6 @@ strict-sigcheck = false
 enabled = true
 brand = "morphe"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/life360/family-locator-gps-tracker/"
-version = "auto"
 
 [life360.patches]
-"github:rushiranpise/morphe-patches" = { include = [] }
+"github:rushiranpise/morphe-patches" = { include = [ "Material You themed icon", "Unlock Platinum" ] }
