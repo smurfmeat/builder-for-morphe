@@ -8,4 +8,4 @@ enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/life360/family-locator-gps-tracker/"
 
 [life360.patches]
-"github:rushiranpise/morphe-patches" = { include = [] }
+"github:rushiranpise/morphe-patches" = { include = [], exclude = [ "GmsCore support (MicroG)" ] }
