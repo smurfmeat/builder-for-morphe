@@ -1,3 +1,5 @@
+# Configuration guide: https://github.com/nvbangg/builder-for-morphe/blob/main/CONTRIBUTING.md
+
 strict-sigcheck = false
 
 [InShot]
