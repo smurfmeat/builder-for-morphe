@@ -13,7 +13,9 @@ changelog-keywords = ["vpnify"]
 
 [youtube-music]
 enabled = true
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
+brand = "morphe"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music/"
+version = "auto"
 
 [youtube-music.patches]
 "github:MorpheApp/morphe-patches" = { include = [] }
