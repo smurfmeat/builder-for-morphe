@@ -1,7 +1,7 @@
 [InShot]
 enabled = true
 brand = "morphe"
-apkmirror-dlurl = "https://apkmirror.com"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/inshot-inc/inshot-video-editor-photo-editor/"
 changelog-keywords = ["InShot"]
 
 [InShot.patches]
@@ -10,7 +10,7 @@ changelog-keywords = ["InShot"]
 [vpnify]
 enabled = true
 brand = "morphe"
-apkmirror-dlurl = "https://apkmirror.com"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/vpnify/vpnify-unlimited-vpn-proxy/"
 changelog-keywords = ["vpnify"]
 
 [vpnify.patches]
@@ -19,7 +19,7 @@ changelog-keywords = ["vpnify"]
 [MEGA]
 enabled = true
 brand = "morphe"
-apkmirror-dlurl = "https://apkmirror.com"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/mega-ltd/mega-official/"
 changelog-keywords = ["MEGA"]
 
 [MEGA.patches]
@@ -28,7 +28,7 @@ changelog-keywords = ["MEGA"]
 [Life360]
 enabled = true
 brand = "morphe"
-apkmirror-dlurl = "https://apkmirror.com"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/life360/family-locator-gps-tracker/"
 changelog-keywords = ["Life360"]
 
 [Life360.patches]
