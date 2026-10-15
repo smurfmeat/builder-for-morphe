@@ -8,5 +8,5 @@ brand = "morphe"
 apkmirror-dlurl = "https://apkmirror.com"
 changelog-keywords = ["vpnify"]
 
-[[vpnify.patches]]
-key = "github:rushiranpise/morphe-patches" = []
+[vpnify.patches]
+"github:rushiranpise/morphe-patches" = []
