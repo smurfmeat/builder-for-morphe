@@ -9,4 +9,4 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/vpnify/vpnify-unlimited-vpn-pro
 changelog-keywords = ["vpnify"]
 
 [vpnify.patches]
-"github:rushiranpise/morphe-patches" = { include = [] }
+"github:hxreborn/morphe-patches" = { include = [] }
