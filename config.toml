@@ -2,235 +2,43 @@
 
 strict-sigcheck = false
 
-[YouTube]
-enabled = true
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
-
-[YouTube.patches]
-"github:MorpheApp/morphe-patches" = []
-
-[YT-Music]
-enabled = true
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
-arch = "both"
-
-[YT-Music.patches]
-"github:MorpheApp/morphe-patches" = []
-
-[Reddit]
-enabled = true
-apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
-
-[Reddit.patches]
-"github:MorpheApp/morphe-patches" = []
-
-[YouTube-Experimental]
-enabled = false
-brand = "morphe-dev"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
-version = "exp"
-patcher-args = "-e 'Change header' -Ocustom=icons/YouTube/header -e 'Custom branding' -OcustomIcon=icons/YouTube/branding -OcustomName='YouTube Morphe'"
-
-[YouTube-Experimental.patches]
-"github:MorpheApp/morphe-patches" = { version = "dev" }
-
-[YT-Music-Experimental]
-enabled = false
-brand = "morphe-dev"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
-arch = "both"
-version = "exp"
-patcher-args = "-e 'Change header' -Ocustom=icons/Music/header -e 'Custom branding' -OcustomIcon=icons/Music/branding -OcustomName='Music Morphe'"
-
-[YT-Music-Experimental.patches]
-"github:MorpheApp/morphe-patches" = { version = "dev" }
-
-[Reddit-Experimental]
-enabled = false
-brand = "morphe-dev"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit"
-version = "exp"
-patcher-args = "-e 'Custom branding name for Reddit' -OappName='Reddit Morphe'"
-
-[Reddit-Experimental.patches]
-"github:MorpheApp/morphe-patches" = { version = "dev" }
-
-[X-Twitter]
-enabled = true
-brand = "piko"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
-
-[X-Twitter.patches]
-"github:crimera/piko" = ["Browse tweet object", "Dynamic color"]
-
-[Instagram]
-enabled = true
-brand = "piko"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram"
-arch = "arm64-v8a"
-patcher-args = "-e 'Theme' -Oamoled=true"
-
-[Instagram.patches]
-"github:crimera/piko" = []
-
-[Google-Photos]
-enabled = false
-brand = "rushi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos/"
-changelog-keywords = ["Photos"]
-
-[Google-Photos.patches]
-"github:rushiranpise/morphe-patches" = []
-
-[Messenger]
-enabled = false
-brand = "rushi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-technologies-llc/messenger/"
-arch = "both"
-changelog-keywords = ["Messenger"]
-
-[Messenger.patches]
-"github:rushiranpise/morphe-patches" = []
-
-[Amazon-Shopping]
-enabled = false
-brand = "rushi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/amazon-shopping/"
-changelog-keywords = ["Amazon"]
-
-[Amazon-Shopping.patches]
-"github:rushiranpise/morphe-patches" = []
-
-[Block-Blast]
-enabled = false
-brand = "rushi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/hungrystudio/block-blast-puzzle-games/"
-changelog-keywords = ["Block Blast"]
-
-[Block-Blast.patches]
-"github:rushiranpise/morphe-patches" = []
-
-[Telegram]
-enabled = false
-brand = "rushi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/telegram-fz-llc/telegram-web-version/"
-changelog-keywords = ["Telegram"]
-
-[Telegram.patches]
-"github:rushiranpise/morphe-patches" = []
-
-[Adobe-Acrobat] 
-enabled = false
-brand = "rushi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/adobe-acrobat/"
-changelog-keywords = ["Acrobat"]
-
-[Adobe-Acrobat.patches]
-"github:rushiranpise/morphe-patches" = []
-
-[Proton-VPN]
-enabled = false
-brand = "rushi"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/proton-technologies-ag/protonvpn-secure-and-free-vpn/"
-changelog-keywords = ["Proton"]
-
-[Proton-VPN.patches]
-"github:rushiranpise/morphe-patches" = []
-
-[Duolingo]
-enabled = false
-brand = "hoo-dles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/duolingo/duolingo-duolingo/"
-changelog-keywords = ["Duolingo"]
-
-[Duolingo.patches]
-"github:hoo-dles/morphe-patches" = []
-
-[Prime-Video]
-enabled = false
-brand = "hoo-dles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/amazon-mobile-llc/amazon-prime-video/"
-arch = "arm64-v8a"
-changelog-keywords = ["Prime Video"]
-
-[Prime-Video.patches]
-"github:hoo-dles/morphe-patches" = []
-
-[WPS-Office]
-enabled = false
-brand = "hoo-dles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/wps-software-pte-ltd/wps-office-pdf/"
-changelog-keywords = ["WPS"]
-
-[WPS-Office.patches]
-"github:hoo-dles/morphe-patches" = []
-
-[CamScanner]
-enabled = false
-brand = "hoo-dles"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/intsig-information-co-ltd/camscanner-phone-pdf-creator/"
-changelog-keywords = ["CamScanner"]
-
-[CamScanner.patches]
-"github:hoo-dles/morphe-patches" = []
-
 [InShot]
-enabled = false
+enabled = true
 brand = "hooman"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/inshot-inc/inshot-video-editor-photo-editor/"
+apkmirror-dlurl = "https://apkmirror.com"
 changelog-keywords = ["InShot"]
 
 [InShot.patches]
 "github:arandomhooman/hoomans-morphe-patches" = []
 
-[Twitch]
-enabled = false
-brand = "hooman"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch/"
-changelog-keywords = ["Twitch"]
+[vpnify]
+enabled = true
+brand = "rushi"
+apkmirror-dlurl = "https://apkmirror.com"
+changelog-keywords = ["vpnify"]
 
-[Twitch.patches]
-"github:arandomhooman/hoomans-morphe-patches" = []
+[vpnify.patches]
+"github:rushiranpise/morphe-patches" = []
 
-[Truecaller]
-enabled = false
-brand = "paresh"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/true-software-scandinavia-ab/truecaller-caller-id-block/"
-changelog-keywords = ["Truecaller"]
+[MEGA]
+enabled = true
+brand = "rushi"
+apkmirror-dlurl = "https://apkmirror.com"
+changelog-keywords = ["MEGA"]
 
-[Truecaller.patches]
-"gitlab:Paresh-Maheshwari/paresh-patches" = []
+[MEGA.patches]
+"github:rushiranpise/morphe-patches" = []
 
-[JioHotstar]
-enabled = false
-brand = "paresh"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/jiostar-india-private-limited/jiohotstar-4/"
-changelog-keywords = ["JioHotstar"]
+[Life360]
+enabled = true
+brand = "rushi"
+apkmirror-dlurl = "https://apkmirror.com"
+changelog-keywords = ["Life360"]
 
-[JioHotstar.patches]
-"gitlab:Paresh-Maheshwari/paresh-patches" = []
+[Life360.patches]
+"github:rushiranpise/morphe-patches" = []
 
-[Facebook]
-enabled = false
-brand = "de-vanced"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook/"
-arch = "both"
 
-[Facebook.patches]
-"github:RookieEnough/De-Vanced" = []
 
-[Viber]
-enabled = false
-brand = "de-vanced"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber/"
 
-[Viber.patches]
-"github:RookieEnough/De-Vanced" = []
 
-[TikTok]
-enabled = false
-brand = "tiktok"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
-
-[TikTok.patches]
-"github:icysymmetra/tiktok-patches-for-morphe" = []
