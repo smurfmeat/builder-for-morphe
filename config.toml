@@ -2,39 +2,6 @@
 
 strict-sigcheck = false
 
-[vpnify]
-enabled = true
-brand = "morphe"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/vpnify/vpnify-unlimited-vpn-proxy/"
-changelog-keywords = ["vpnify"]
-
-[vpnify.patches]
-"github:hxreborn/morphe-patches" = { include = [] }
-
-[youtube-music]
-enabled = true
-brand = "morphe"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music/"
-arch = "arm64-v8a"
-
-[youtube-music.patches]
-"github:MorpheApp/morphe-patches" = { include = [] }
-
-[mega]
-enabled = true
-brand = "morphe"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/mega-ltd/mega-official/"
-
-[mega.patches]
-"github:rushiranpise/morphe-patches" = { include = [] }
-
-[inshot]
-enabled = true
-brand = "morphe"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/inshot-inc/inshot-video-editor-photo-editor/"
-
-[inshot.patches]
-"github:arandomhooman/hoomans-morphe-patches" = { include = [] }
 
 [life360]
 enabled = true
