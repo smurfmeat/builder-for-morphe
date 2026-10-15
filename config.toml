@@ -2,18 +2,6 @@
 
 strict-sigcheck = false
 
-[InShot]
-enabled = true
-brand = "morphe"
-apkmirror-dlurl = "https://apkmirror.com"
-changelog-keywords = ["InShot"]
-
-[[InShot.patches]]
-key = "github:arandomhooman/hoomans-morphe-patches"
-version = "latest"
-include = []
-exclude = []
-
 [vpnify]
 enabled = true
 brand = "morphe"
@@ -21,32 +9,4 @@ apkmirror-dlurl = "https://apkmirror.com"
 changelog-keywords = ["vpnify"]
 
 [[vpnify.patches]]
-key = "github:rushiranpise/morphe-patches"
-version = "latest"
-include = []
-exclude = []
-
-[MEGA]
-enabled = true
-brand = "morphe"
-apkmirror-dlurl = "https://apkmirror.com"
-changelog-keywords = ["MEGA"]
-
-[[MEGA.patches]]
-key = "github:rushiranpise/morphe-patches"
-version = "latest"
-include = []
-exclude = []
-
-[Life360]
-enabled = true
-brand = "morphe"
-apkmirror-dlurl = "https://apkmirror.com"
-changelog-keywords = ["Life360"]
-
-[[Life360.patches]]
-key = "github:rushiranpise/morphe-patches"
-version = "latest"
-include = []
-exclude = []
-
+key = "github:rushiranpise/morphe-patches" = []
