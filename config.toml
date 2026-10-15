@@ -5,35 +5,35 @@ strict-sigcheck = false
 [InShot]
 enabled = true
 brand = "morphe"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/inshot-inc/inshot-video-editor-photo-editor/"
+apkmirror-dlurl = "https://apkmirror.com"
 changelog-keywords = ["InShot"]
 
 [InShot.patches]
-"github:arandomhooman/hoomans-morphe-patches" = []
+"github:arandomhooman/hoomans-morphe-patches" = ""   # FIXED: Changed from [] to "" to enable all patches
 
 [vpnify]
 enabled = true
 brand = "morphe"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/vpnify/vpnify-unlimited-vpn-proxy/"
+apkmirror-dlurl = "https://apkmirror.com"
 changelog-keywords = ["vpnify"]
 
 [vpnify.patches]
-"github:rushiranpise/morphe-patches" = []
+"github:rushiranpise/morphe-patches" = ""            # FIXED: Enables all vpnify premium patches
 
 [MEGA]
 enabled = true
 brand = "morphe"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/mega-ltd/mega-official/"
+apkmirror-dlurl = "https://apkmirror.com"
 changelog-keywords = ["MEGA"]
 
 [MEGA.patches]
-"github:rushiranpise/morphe-patches" = []
+"github:rushiranpise/morphe-patches" = ""            # FIXED: Enables all MEGA cloud bypass patches
 
 [Life360]
 enabled = true
 brand = "morphe"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/life360/family-locator-gps-tracker/"
+apkmirror-dlurl = "https://apkmirror.com"
 changelog-keywords = ["Life360"]
 
 [Life360.patches]
-"github:rushiranpise/morphe-patches" = []
+"github:rushiranpise/morphe-patches" = ""            # FIXED: Enables all Life360 custom mapping patches
