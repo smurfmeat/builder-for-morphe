@@ -4,7 +4,7 @@ strict-sigcheck = false
 
 [InShot]
 enabled = true
-brand = "hooman"
+brand = "morphe"
 apkmirror-dlurl = "https://apkmirror.com"
 changelog-keywords = ["InShot"]
 
@@ -13,7 +13,7 @@ changelog-keywords = ["InShot"]
 
 [vpnify]
 enabled = true
-brand = "rushi"
+brand = "morphe"
 apkmirror-dlurl = "https://apkmirror.com"
 changelog-keywords = ["vpnify"]
 
@@ -22,7 +22,7 @@ changelog-keywords = ["vpnify"]
 
 [MEGA]
 enabled = true
-brand = "rushi"
+brand = "morphe"
 apkmirror-dlurl = "https://apkmirror.com"
 changelog-keywords = ["MEGA"]
 
@@ -31,7 +31,7 @@ changelog-keywords = ["MEGA"]
 
 [Life360]
 enabled = true
-brand = "rushi"
+brand = "morphe"
 apkmirror-dlurl = "https://apkmirror.com"
 changelog-keywords = ["Life360"]
 
