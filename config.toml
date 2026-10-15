@@ -1,7 +1,3 @@
-# Configuration guide: https://github.com/nvbangg/builder-for-morphe/blob/main/CONTRIBUTING.md
-
-strict-sigcheck = false
-
 [InShot]
 enabled = true
 brand = "morphe"
@@ -37,8 +33,3 @@ changelog-keywords = ["Life360"]
 
 [Life360.patches]
 "github:rushiranpise/morphe-patches" = []
-
-
-
-
-
