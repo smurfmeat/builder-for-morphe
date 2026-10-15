@@ -5,7 +5,7 @@ strict-sigcheck = false
 [vpnify]
 enabled = true
 brand = "morphe"
-apkmirror-dlurl = "https://apkmirror.com"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/vpnify/vpnify-unlimited-vpn-proxy/"
 changelog-keywords = ["vpnify"]
 
 [vpnify.patches]
