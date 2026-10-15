@@ -122,18 +122,18 @@ jobs:
         run: uv run main.py ${{ matrix.id }} ${{ matrix.arch }}
 
       - name: Upload APKs to draft release
-    if: always()
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      TAG: ${{ needs.prepare.outputs.version }}
-    run: |
-      shopt -s nullglob
-      apks=(./build/*.apk)
-      if [[ ${#apks[@]} -eq 0 ]]; then
-        echo "No APKs to upload, skipping"
-        exit 0
-      fi
-      gh release upload "$TAG" "${apks[@]}" --clobber --repo "$GITHUB_REPOSITORY"
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ needs.prepare.outputs.version }}
+        run: |
+          shopt -s nullglob
+          apks=(./build/*.apk)
+          if [[ ${#apks[@]} -eq 0 ]]; then
+            echo "No APKs to upload, skipping"
+            exit 0
+          fi
+          gh release upload "$TAG" "${apks[@]}" --clobber --repo "$GITHUB_REPOSITORY"
 
       - name: Upload build log to draft release
         if: always()
@@ -142,12 +142,10 @@ jobs:
           TAG: ${{ needs.prepare.outputs.version }}
           LABEL: ${{ matrix.id }}${{ matrix.arch && format('-{0}', matrix.arch) || '' }}
         run: |
-          if [[ -f build.md && -s build.md ]]; then
-            cp build.md "build-${LABEL}.md"
-            gh release upload "$TAG" "build-${LABEL}.md" --clobber --repo "$GITHUB_REPOSITORY"
-          else
-            echo "No build.md found, skipping log upload"
-          fi
+          [[ -f build.md ]] || exit 0
+          [[ -s build.md ]] || exit 0
+          cp build.md "build-${LABEL}.md"
+          gh release upload "$TAG" "build-${LABEL}.md" --clobber --repo "$GITHUB_REPOSITORY"
 
   release:
     needs: [prepare, run]
@@ -188,8 +186,8 @@ jobs:
           TAG: ${{ needs.prepare.outputs.version }}
         run: |
           mkdir -p logs
-          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern "build-*.md" --dir logs || true
-          gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[] | select(.name | startswith("build-")) | .apiUrl' | xargs -I{} gh api --method DELETE "{}" || true
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern "build-*.md" --dir logs
+          gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[] | select(.name | startswith("build-")) | .apiUrl' | xargs -I{} gh api --method DELETE "{}"
 
       - name: Combine logs and finalize release
         if: steps.check.outputs.has_apks == 'true'
@@ -198,11 +196,7 @@ jobs:
           TAG: ${{ needs.prepare.outputs.version }}
           PRERELEASE: ${{ needs.prepare.outputs.prerelease }}
         run: |
-          if [ -d logs ] && [ "$(ls -A logs)" ]; then
-            uv run python -m src.scripts.logs combine-logs logs | sed "s/{TAG}/$TAG/g" > final.md
-          else
-            echo "No log files found to combine." > final.md
-          fi
+          uv run python -m src.scripts.logs combine-logs logs | sed "s/{TAG}/$TAG/g" > final.md
           if [ "$PRERELEASE" = "true" ]; then
             gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" --draft=false --prerelease --title "$TAG" --notes-file final.md
           else
@@ -214,7 +208,7 @@ jobs:
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: ${{ secrets.TG_CHAT }}
-        run: uv run python -m src.scripts.telegram notify '${{ inputs.patch_source }}' || true
+        run: uv run python -m src.scripts.telegram notify '${{ inputs.patch_source }}'
 
       - name: Delete empty draft if no APKs
         if: steps.check.outputs.has_apks != 'true'
