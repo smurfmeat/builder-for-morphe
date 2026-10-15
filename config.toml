@@ -18,7 +18,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music/"
 arch = "arm64-v8a"
 
 [youtube-music.patches]
-"github:MorpheApp/morphe-patches" = { include = [] }
+"github:MorpheApp/morphe-patches" = { include = [], exclude = [ "Custom branding", "GmsCore support", "Network proxy", "PoToken provider" ] }
 
 [mega]
 enabled = true
