@@ -8,8 +8,11 @@ brand = "morphe"
 apkmirror-dlurl = "https://apkmirror.com"
 changelog-keywords = ["InShot"]
 
-[InShot.patches]
-"github:arandomhooman/hoomans-morphe-patches" = ""   # FIXED: Changed from [] to "" to enable all patches
+[[InShot.patches]]
+key = "github:arandomhooman/hoomans-morphe-patches"
+version = "latest"
+include = []
+exclude = []
 
 [vpnify]
 enabled = true
@@ -17,8 +20,11 @@ brand = "morphe"
 apkmirror-dlurl = "https://apkmirror.com"
 changelog-keywords = ["vpnify"]
 
-[vpnify.patches]
-"github:rushiranpise/morphe-patches" = ""            # FIXED: Enables all vpnify premium patches
+[[vpnify.patches]]
+key = "github:rushiranpise/morphe-patches"
+version = "latest"
+include = []
+exclude = []
 
 [MEGA]
 enabled = true
@@ -26,8 +32,11 @@ brand = "morphe"
 apkmirror-dlurl = "https://apkmirror.com"
 changelog-keywords = ["MEGA"]
 
-[MEGA.patches]
-"github:rushiranpise/morphe-patches" = ""            # FIXED: Enables all MEGA cloud bypass patches
+[[MEGA.patches]]
+key = "github:rushiranpise/morphe-patches"
+version = "latest"
+include = []
+exclude = []
 
 [Life360]
 enabled = true
@@ -35,5 +44,9 @@ brand = "morphe"
 apkmirror-dlurl = "https://apkmirror.com"
 changelog-keywords = ["Life360"]
 
-[Life360.patches]
-"github:rushiranpise/morphe-patches" = ""            # FIXED: Enables all Life360 custom mapping patches
+[[Life360.patches]]
+key = "github:rushiranpise/morphe-patches"
+version = "latest"
+include = []
+exclude = []
+
